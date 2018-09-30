@@ -7,26 +7,24 @@ class Button extends React.Component {
     this.props.clickHandler(this.props.name);
   };
 
-  render(){
+  render() {
     const className = [
       "component-button",
       this.props.orange ? "orange" : "",
       this.props.wide ? "wide" : "",
     ];
 
-    return(
+    return (
       <div className={className.join(" ").trim()}>
         <button onClick={this.handleClick}>{this.props.name}</button>
       </div>
     );
   }
 }
-
 Button.propTypes = {
-  name:PropTypes.string,
-  orange:PropTypes.bool,
-  wide:PropTypes.bool,
-  clickHandler:PropTypes.func,
+  name: PropTypes.string,
+  orange: PropTypes.bool,
+  wide: PropTypes.bool,
+  clickHandler: PropTypes.func,
 };
-
 export default Button;
